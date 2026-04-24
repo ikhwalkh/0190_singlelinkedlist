@@ -19,6 +19,7 @@ class Linkedlist
         START = NULL;
     }
 
+    //void node
     void addNode()
     {
         int nim;
