@@ -170,8 +170,36 @@ int main()
                     cout << "\nList Kosong\n";
                     break;
                 }
-            }
+                Node *previous, *current;
+                      cout << endl
+                      << "Masukkan no mahasiswa yang dicari : ";
+                      cin >> nim;
+
+                     if (mhs.search(nim, &previous, &current) == false)
+                         cout << endl
+                         << "Data tidak ditemukan" << endl;
+                        else
+                         {
+                           cout << endl
+                           << "Data ditemukan" << endl;
+                           cout << "\nNo Mahasiswa: " << current->noMhs << endl;
+                           cout << "\n";
+                         }
+
+                    }
+                    break;
+                    case '5':
+                    {
+                    }
+                    break;
+                    default:
+                    {
+                        cout << "pilihan salah !." << endl;
+                    }
+                    break;
+                }
+            } while (ch != '5');
         }
-    }
+        
     
-}
+    
