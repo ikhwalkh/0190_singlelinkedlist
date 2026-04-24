@@ -8,6 +8,7 @@ class Node
     Node *next;
 };
 
+// Class Linkedlist
 class Linkedlist
 {
     Node *START;
