@@ -55,7 +55,7 @@ class Linkedlist
             previous->next = nodeBaru;
         }
 
-        bool listEmpty()
+        bool ListEmpty()
         {
             return (START == NULL);
         }
@@ -109,3 +109,65 @@ class Linkedlist
         }
     }
 };
+
+int main()
+{
+    Linkedlist Mhs;
+    int nim;
+    char ch;
+    do
+    {
+        cout << endl;
+        cout << "menu";
+        cout << endl;
+        cout << "1. menambah data kedalam list" << endl;
+        cout << "2. menghapus data dari dalam list" << endl;
+        cout << "3. menampilkan semua data dari dalam list" << endl;
+        cout << "4. menampilkan semua data didalam list secara terbalik" << endl;
+        cout << "5. mencari data dalam list" << endl;
+        cout << "6. keluar" << endl;
+        cout << endl
+        << "Masukkan pilihan (1-5): ";
+        cin >> ch;
+        switch (ch)
+        {
+            case '1':
+            {
+                Mhs.addNode();
+            }
+            break;
+
+            case '2':
+            {
+                if (Mhs.ListEmpty())
+                {
+                    cout << endl;
+                   cout << "List kosong" << endl;
+                    break;
+                }
+                cout << endl;
+                cout << "\nMasukkan no mahasiswa yang akan dihapus : ";
+                cin >> nim;
+                if (Mhs.delNode(nim) == false)
+                cout << endl;
+                cout << "Data tidak ditemukan" << nim 
+                << " berhasil dihapus " << endl;
+            }
+            break;
+            case '3':
+            {
+                Mhs.traverse();
+            }
+            break;
+            case '4':
+            {
+                if (Mhs.ListEmpty() == true)
+                {
+                    cout << "\nList kosong\n";
+                    break;
+                }
+            }
+        }
+    } while ();
+    
+}
