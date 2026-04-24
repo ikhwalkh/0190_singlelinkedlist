@@ -27,6 +27,18 @@ class Linkedlist
         cin >> nim;
 
         Node *nodeBaru = new Node;
-        nodeBaru->nomhs = nim;
+        nodeBaru->noMhs = nim;
+
+        if (START == NULL || nim <= START->noMhs)
+        {
+            if ((START != NULL) && (nim == START->noMhs))
+            {
+                cout << "\nDuplikasi noMhs tidak diijikankan\n";
+                return;
+            }
+
+            Node *previous = START;
+            Node *current = START;
+        }
     }
 }
